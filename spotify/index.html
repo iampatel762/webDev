@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img id="img_logo" src="spotify_logo.png" alt="logo_spotify">
+            </li>
+            <li>HOME</li>
+            <li>ABOUT</li>
+        </ul>
+    </nav>
+
+    <div class="cover">
+        <div class="musicListBox">
+            <div id="stickyhead">BEST OF UDIT NARAYAN</div>
+            <div id="songList">
+                <div>song1</div>
+                <div>song2</div>
+                <div>song3</div>
+                <div>song4</div>
+                <div>song5</div>
+                <div>song6</div>
+                <div>song7</div>
+                <div>song8</div>
+                <div>song9</div>
+                <div>song10</div>
+                <div>song11</div>
+                <div>song12</div>
+            </div>
+        </div>
+          <div id="cd1">
+            <div id="cd2">
+                <div id="cd3">
+                    
+                </div>
+            </div>
+          </div>
+    </div>
+    <!--bottom bar...................-->
+    <div class="botton">
+        <img src="backward-step-solid.svg" alt="prev" class="bar">
+        <img src="circle-play-solid.svg" alt="pause/play" class="bar" id="masterplay">        
+        <img src="forward-step-solid.svg" alt="next" class="bar">
+    
+        <input type="range" value="0" min="0" max="100" id="rangef" oninput="updateme">
+    </div>
+</body>
+<script src="javascript.js"></script>
+</html>

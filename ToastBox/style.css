@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgb(54, 42, 54);
+}
+.buttons{
+    margin: 100px;
+}
+.buttons button{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(79, 79, 199);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.toastBox{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+.toast{
+    height: 40px;
+    width: 300px;
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    box-shadow: 0 10px 10px -5px rgb(216, 84, 84);
+    position: relative;
+    padding-bottom: 3px;
+    transform: translateX(100%);
+    animation: toast 0.5s linear forwards;
+}
+
+.toast::before{
+    content: '';
+    margin-right: 5px;
+    background-image: url(image/circle-check-solid.svg);
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-position: center;
+}
+.toast::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: green;
+    animation: anim 7s linear forwards;
+}
+
+.toast.error img::before{
+    content: '';
+    margin-right: 5px;
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-position: center;
+    src: url(image/circle-xmark-solid.svg);
+    
+}
+.toast.error::after{
+    background-color: red;
+}
+.toast.invalid img::before{
+    src: url(image/circle-exclamation-solid.svg);
+    fill: orange;
+}
+.invalid.invalid::after{
+    background-color: orange;
+}
+
+
+@keyframes anim{
+    0%{
+        width: 0;
+    }
+}
+@keyframes toast{
+    100%{
+        transform: translateX(0%);
+    }
+}

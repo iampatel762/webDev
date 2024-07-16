@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            border: 0px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+               -webkit-appearance: none;
+                margin: 0;
+        }
+ 
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+
+        .main{
+            width: 400px;
+            height: 250px;
+            border: 6px solid black;
+            margin: auto;
+            margin-top: 300px;
+        }
+        .input_raw{
+            width: 400px;
+            height: 100px;
+            border: 2px solid black;
+        }
+        .input_block{
+            width: 300px;
+            height: 96px;
+            margin: auto;
+        }
+        /*.input1 , .input2 , .input3{
+            
+        }*/
+        .input_block div{
+            width: 88px;
+            height: 90px;
+            float: left;
+            border: 3px solid red;
+            margin-left: 3px;
+            margin-top: 3px;
+        }
+        .submition_raw{
+            width: 400px;
+            height: 50px;
+        }
+        #submition_block{
+            width: 200px;
+            height: 50px;
+            margin: auto;
+        }
+        .result_raw{
+            height: 100px;
+            width: 400px;
+        }
+        #result_block{
+            height: 96px;
+            width: 200px;
+            margin: auto;
+        }
+        #submitme{
+            width: 100%;
+            height: 100%;
+            background-color: blueviolet;
+            color:white;
+            font-weight: 10px;
+            align-items: center;
+
+        }
+        #inputNme1,#inputNme2,#inputSme{
+            width: 100%;
+            height: 100%;
+            font-size: large;
+            text-align: center;
+                        
+        }
+        #submitme{
+            width: 100%;
+            height: 100%;
+        }
+        #resultme{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="input_raw">
+            <div class="input_block">
+                <div class="input1">
+                    <input type="number" id="inputNme1" >
+                </div>
+               <div class="input2">
+                 <input type="text" id="inputSme">
+               </div>
+                <div class="input3">
+                    <input type="number" id="inputNme2">
+                </div>
+            </div>
+        </div>
+        <div class="submition_raw">  
+            <div id="submition_block">
+                <button id="submitme" onclick="simplify()">=</button>
+            </div>
+        </div>
+        <div class="result_raw">
+            <div id="result_block">
+                <input type="text" placeholder="Result" id="resultme" style="text-align: center; font-size: large;">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+    simplify=()=>{
+        let a=Number.parseInt(document.getElementById('inputNme1').value);
+        let b=document.getElementById('inputSme').value;
+        let c=Number.parseInt(document.getElementById('inputNme2').value);
+        let result;
+        switch (b) {
+        case "+":
+            document.getElementById('resultme').value=a+c;
+            break;
+        case "-":
+            document.getElementById('resultme').value=a-c;
+            break;
+        case "*":
+            document.getElementById('resultme').value=a*c;
+            break;
+        case "/":
+            document.getElementById('resultme').value=a/c;
+            break;
+        default:
+            document.getElementById('resultme').value="Attention on operator!!";
+            break;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(126deg,#003e80,#ff0095d4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .imgBox{
+            position: relative;
+            overflow: hidden;
+        }
+        .img_wrap{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imgBox">
+
+            <img src="imges/OIP_du.png " alt="img" width="100%">
+            <div class="img_wrap">
+                <img src="imges/OIP.jpg" alt="img_wrap">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // let imgBox = document.querySelector(".imgBox");
+        // let img_wrap = document.querySelector(".img_wrap");
+
+        // let leftSpace = imgBox.offsetLeft;
+        // // console.log(leftSpace);
+
+        // // imgBox.onmousemove = function(e){
+        // //     let boxWidth = e.pageX - leftSpace;
+        // //     img_wrap.style.width = boxWidth +"px";
+        // // }
+        // let requestId;
+
+        // imgBox.onmousemove = function(e){
+        //     if(requestId){
+        //         cancelAnimationFrame(requestId);
+        //     }
+        //     requestId = requestAnimationFrame(()=>{
+        //         let boxWidth = e.pageX - leftSpace;
+        //         img_wrap.style.width = 2*boxWidth + 'px';
+        //     });
+        // }
+
+
+         let imgBox = document.querySelector(".imgBox");
+        let img_wrap = document.querySelector(".img_wrap");
+
+        let leftSpace = imgBox.offsetLeft;
+        let maxWidth = imgBox.clientWidth; // Maximum width of img_wrap
+        let minWidth = 0; // Minimum width of img_wrap
+        let requestId;
+
+        imgBox.onmousemove = function(e){
+        if (requestId) {
+            cancelAnimationFrame(requestId);
+        }
+        requestId = requestAnimationFrame(() => {
+            let boxWidth = e.pageX - leftSpace;
+            if (boxWidth < minWidth) {
+                boxWidth = minWidth;
+            } else if (boxWidth > maxWidth) {
+                boxWidth = maxWidth;
+            }
+            img_wrap.style.width = boxWidth + 'px';
+        });
+}
+
+
+
+    </script>
+</body>
+</html>

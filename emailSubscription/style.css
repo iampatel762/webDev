@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;  
+    height: 100vh;
+    background:linear-gradient(#222,#333);
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+}
+.main{
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+}
+.emailBox{
+    padding: 5px;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.emailBox input{
+    height: 100%;
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+}
+.emailBox button{
+    height: 100%;
+    width: 60px;
+    padding: 5px 10px;
+    background-image: url(1033508.png);
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.emailBox button img{
+    width: 30px;
+}
+.main span{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: green;
+}

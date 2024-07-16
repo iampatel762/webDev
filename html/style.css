@@ -1,0 +1,42 @@
+.external_border{
+    height: 600px;
+    width: 600px;
+    border: 3px solid black;
+    margin: auto;
+    position: relative;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    position: absolute;
+    animation: box1 5s alternate infinite;
+}
+
+@keyframes box1{
+    0%{
+       top: 0px;
+       left: 0px;
+        background-color: red;  
+    }
+    25%{
+        top: 0px;
+        left: 400px;
+        background-color: rgb(81, 255, 0);  
+    }
+    50%{
+        top: 400px;
+        left: 400px;
+        background-color: rgb(183, 0, 255);  
+    }
+    75%{
+        top: 400px;
+        left: 0px;
+        background-color: rgb(200, 255, 0);  
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+        background-color: red;  
+    }
+}

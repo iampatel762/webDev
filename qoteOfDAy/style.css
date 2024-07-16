@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+}
+.qote-block{
+    max-width: 500px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 15px;
+    background:white;
+    text-align: center;
+    box-shadow:12px 14px 10px -5px rgb(236, 82, 82);
+}
+.qote-block h1{
+    font-size: 50px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.qote-block h1::after{
+    content: '';
+    width: 300px;
+    height: 3px;
+    background-color: black;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;    
+    bottom: -10px;
+}
+.qote-block blockquote{
+    font-size: 27px;
+    min-width: 110px;
+    font-weight: 500;
+}
+.qote-block blockquote::before,.qote-block blockquote::after{
+    content: ' " ';
+}
+.qote-block span{
+    margin-top: 13px;
+    float: right;
+}
+.qote-block div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.linkSite button{
+    background-color: rgb(23,124,229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23,124,229);
+    width: 100px;
+    height: 40px;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px;
+}
+.linkSite button img{
+    width: 30px;
+}
+.linkSite button:nth-child(2){
+    background-color: transparent;
+    color: black;
+}
+
+

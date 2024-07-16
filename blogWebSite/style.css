@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(125deg,#222,#313);
+    display: flex;
+}
+.info1{
+    height: 100vh;
+    width: 25%;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(196, 187, 187, 0.7);   
+}
+.copyright{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    
+}
+.intro{
+    width: 100%;
+    flex: 1;
+    padding:25px 0px 15px 0px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: -20px;
+    color: white;
+}
+.img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 1px solid white;
+    padding: 5px 25px 5px -5px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.699);
+}
+.img img{
+    width: 160px;
+    height: 160px;
+}
+.info1 h1{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.info1 h2{
+    font: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.info1 ol{
+     height: 40%;
+     width: 100%;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+     align-items: center;
+     justify-content: center;
+}
+.info1 ol li{
+   margin-top: 10px;   
+}
+.info1 ol li a{
+    color: white;
+    text-decoration: none;
+}
+hr{
+    width: 100%;
+}
+.info2{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* second division of div. */
+.info2_intro{
+    width: 50%;
+    height: 500px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#info2_intro_1{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+}
+#info2_intro_2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+    color: white;
+}
+#info2_intro_3{
+    font-size: 25px;
+    font-weight: 650;
+    margin-bottom: 25px;
+    text-align: center;
+    color: white;
+}
+.info2_intro button{
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+.info2_intro button img{
+    width: 15px;
+}
+.info2_imgBox{
+    width: 50%;
+    height: 500px;
+    pad: 5px;
+}
+.socialmedia{
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 520px;
+    left: 50px;
+}
+.socialmedia a img{
+    width: 25px;
+    height: 25px;
+}

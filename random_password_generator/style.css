@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Rubik:wght@600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(193, 241, 225);
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 100px;
+}
+.container{
+    margin-left: 10%;
+    margin-top: 150px;
+
+}
+h1{
+    color:black;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+.container h1 span{
+    border-bottom: 2px solid black;
+}
+.display{
+    display: flex;
+    width: 80%;
+    height: 70px;
+    max-width: 500px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 10px;
+    background-color: #222;
+}
+.display input{
+    border: none;
+    outline: none;
+    color: white;
+    height: 60px;
+    flex: 1;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+}
+.display img{
+    width: 55px;
+    padding: 10px;
+}
+button{
+    display: flex;
+    padding: 5px;
+    background-color: rgb(38, 129, 38);
+    color: white;
+    align-items: center;
+    margin-left: 20px;
+}
+button img{
+    height: 30px;
+    padding: 5px;
+
+}

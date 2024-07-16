@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    width: 100%;    
+    background-image: url("cover.jpeg");
+    opacity:100.3;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav{
+    height: 50px;
+    background-color: rgb(41, 21, 21);
+    color: white;
+
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    
+}
+nav ul li{
+    margin-left: 15px;
+}
+#img_logo{
+    height: 40px;
+    margin-top: 5px;
+}
+/* cover and song list of the music player */
+.cover{
+    margin: auto;
+    height: 86vh;
+    width: 100%;
+    display: flex;
+}
+/*bottom of the frontend*/
+.botton{
+    height: 60px;
+    width: 50%;
+    background-color:black;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+    position: relative;
+    top: -41px;
+}
+
+.bar{
+    justify-content: center;
+    margin: 0 15px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+}
+#rangef{
+    width: 80%;
+}
+#cd1{
+  margin: auto;    
+  border: 1px solid black;
+  display: inline-block;
+  padding: 173px;
+  background-image: url(cd.jpg);
+  background-size: contain;
+  animation:dvd 15s linear infinite;
+}
+#cd2{
+    border: 1px solid black;
+    padding: 18px;
+    background-color:rgba(0, 0, 0, 0.651);
+}
+#cd3{
+    border: 1px solid transparent;
+    padding: 31px;
+    background-color:rgba(87, 78, 78, 0.671);
+}
+#cd1,#cd2,#cd3{
+    border-radius: 50%;
+}
+@keyframes dvd{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.botton,#rangef{
+    cursor: pointer;
+}
+.musicListBox{
+    width: 306px;
+    height: 468px;
+    background-color: transparent;
+    border: 2px solid rgb(241, 193, 209);
+    position: relative;
+    top: 18px;
+    left: 18px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#stickyhead{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: underline;
+    background-color: burlywood;
+    margin-bottom: 20px;
+}
+#songList{
+    width: 100%;
+    height: 64vh;
+    background-color:transparent;
+    overflow: scroll;
+    margin: auto; 
+}
+#songList div{
+    height: 30px;
+    width: 80%;
+    margin: auto;
+    background-color: rgb(150, 167, 122);
+    border-radius: 10%;
+    margin-bottom: 10px;
+
+}
